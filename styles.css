@@ -1,0 +1,275 @@
+@font-face {
+    font-family:"DM Sans";
+    src: url(./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+
+body {
+    background-color: rgb(245, 245, 245);
+    font-family: DM Sans;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 75px 150px auto;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.Item {
+    border-radius: 10px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+/* Main div */
+.Socialdiv {
+    background-color: hsl(256, 67%, 59%);
+    color: hsl(0, 0%, 100%);
+    grid-column-start: 2;
+    grid-column-end: 4; 
+}
+
+/* Text "social" maindiv */
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin: 20px;
+    line-height: 1;
+}
+
+/* image in main div */
+.star {
+    display: block;
+    margin: auto;
+    width: 40%;
+    padding-bottom: 0;
+}
+
+.innerSocialdiv {
+    padding-bottom: 20px;
+}
+
+/* paragraph in maindiv */
+.Socialparagraph {
+    text-align: center;
+}
+
+
+/* Upper left div */
+.Creatediv {
+    background-color: hsl(31, 66%, 93%);
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.Creatediv > h2 {
+    padding-top: 1rem;
+}
+
+/* Upper left div image */
+.click {
+    width: 80%;
+}
+
+
+/* Upper right div */
+.Schedulediv {
+    background-color: hsl(254, 88%, 90%);
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    overflow: hidden;
+}
+
+.Schedulediv > img {
+    width: 150%;
+}
+
+/* Middle column div */
+.Managediv {
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    overflow: hidden;
+}
+
+.Managediv > img {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+/* Middle column div */
+.Maintaindiv {
+    background-color: hsl(39, 100%, 71%);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    overflow: hidden;
+}
+
+.Maintaindiv > h2 {
+    padding-top: 0;
+}
+
+.Maintaindiv > img {
+    padding-top: 0;
+}
+
+/* Last div */
+.Growdiv {
+    display: inline-flex;
+    background-color: hsl(256, 67%, 59%);
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.grow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.growimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.growimg > img {
+    padding: 0;
+}
+
+.grow > h2 {
+    padding: 0;
+    color: white;
+}
+
+.Writediv {
+    background-color: hsl(39, 100%, 71%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.Fasterdiv {
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.yellow {
+    color: hsl(39, 100%, 71%);
+}
+
+.purple {
+    color: hsl(256, 67%, 59%);
+}
+
+h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+    line-height: 1;
+}
+
+img {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.fivesix {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.attribution{
+    padding: 10px;
+    grid-column: 5 / -5;
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    #container {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+
+    .Item {
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+
+    .Maintaindiv {
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .Maintaindiv > h2 {
+        font-size: 1.5rem;
+    }
+
+    .Managediv {
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .Managediv > h2 {
+        font-size: 1.5rem;
+    }
+
+    .Schedulediv {
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+
+}
